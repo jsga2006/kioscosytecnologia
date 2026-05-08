@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--<< Header Area >>-->
+
+<head>
+    <!-- ========== Meta Tags ========== -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Kioscos y Tecnología">
+    <meta name="description" content="Kioscos y Tecnología - Soluciones de Autoservicio e Innovación Digital">
+    <!-- ======== Page title ============ -->
+    <title>Kiosco Serveo - Mesa Interactiva Táctil</title>
+    <!--<< Favcion >>-->
+    <link rel="shortcut icon" href="../assets/img/preloader.svg">
+    <!--<< Bootstrap min.css >>-->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <!--<< Font Awesome.css >>-->
+    <link rel="stylesheet" href="../assets/css/font-awesome.css">
+    <!--<< Animate.css >>-->
+    <link rel="stylesheet" href="../assets/css/animate.css">
+    <!--<< Magnific Popup.css >>-->
+    <link rel="stylesheet" href="../assets/css/magnific-popup.css">
+    <!--<< MeanMenu.css >>-->
+    <link rel="stylesheet" href="../assets/css/meanmenu.css">
+    <!--<< Slick.css >>-->
+    <link rel="stylesheet" href="../assets/css/slick.css">
+    <!--<< Nice Select.css >>-->
+    <link rel="stylesheet" href="../assets/css/nice-select.css">
+    <!--<< Main.css >>-->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <!--<< Style.css >>-->
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .k1-sticky-nav a {
+            transition: all 0.3s ease;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .k1-sticky-nav a:hover {
+            background: rgba(255, 255, 255, 0.3);
+            color: #fff !important;
+        }
+
+        .model-card {
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .model-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .detail-img-card img {
+            transition: all 0.5s ease;
+        }
+
+        .detail-img-card:hover img {
+            transform: scale(1.1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .k1-hero-content h1 {
+            background: #122549;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Preloader Start -->
+    <div id="preloader" class="preloader">
+        <div class="animation-preloader">
+            <div class="spinner">
+            </div>
+            <div class="txt-loading">
+                <span data-text-preloader="K" class="letters-loading">
+                    K
+                </span>
+                <span data-text-preloader="I" class="letters-loading">
+                    I
+                </span>
+                <span data-text-preloader="O" class="letters-loading">
+                    O
+                </span>
+                <span data-text-preloader="S" class="letters-loading">
+                    S
+                </span>
+                <span data-text-preloader="C" class="letters-loading">
+                    C
+                </span>
+                <span data-text-preloader="O" class="letters-loading">
+                    O
+                </span>
+                <span data-text-preloader="S" class="letters-loading">
+                    S
+                </span>
+            </div>
+            <p class="text-center">Loading</p>
+        </div>
+        <div class="loader">
+            <div class="row">
+                <div class="col-3 loader-section section-left">
+                    <div class="bg"></div>
+                </div>
+                <div class="col-3 loader-section section-left">
+                    <div class="bg"></div>
+                </div>
+                <div class="col-3 loader-section section-right">
+                    <div class="bg"></div>
+                </div>
+                <div class="col-3 loader-section section-right">
+                    <div class="bg"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--<< Mouse Cursor Start >>-->
+    <div class="mouse-cursor cursor-outer"></div>
+    <div class="mouse-cursor cursor-inner"></div>
+
+    <!-- Offcanvas Area Start -->
+    <div class="fix-area">
+        <div class="offcanvas__info">
+            <div class="offcanvas__wrapper">
+                <div class="offcanvas__content">
+                    <div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
+                        <div class="offcanvas__logo">
+                            <a href="../index.html">
+                                <img src="../assets/img/logo/logo2.png" alt="logo-img">
+                            </a>
+                        </div>
+                        <div class="offcanvas__close">
+                            <button>
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="mobile-menu fix mb-3"></div>
+                    <div class="offcanvas__contact">
+                        <h4>Información de Contacto</h4>
+                        <ul>
+                            <li class="d-flex align-items-center">
+                                <div class="offcanvas__contact-icon">
+                                    <i class="fal fa-map-marker-alt"></i>
+                                </div>
+                                <div class="offcanvas__contact-text">
+                                    <a target="_blank" href="#">Calle Principal, Ciudad, País</a>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <div class="offcanvas__contact-icon mr-15">
+                                    <i class="fal fa-envelope"></i>
+                                </div>
+                                <div class="offcanvas__contact-text">
+                                    <a href="mailto:info@kioscosytecnologia.com">info@kioscosytecnologia.com</a>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <div class="offcanvas__contact-icon mr-15">
+                                    <i class="fal fa-clock"></i>
+                                </div>
+                                <div class="offcanvas__contact-text">
+                                    <a target="_blank" href="#">Lun-Vie, 09am -06pm</a>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <div class="offcanvas__contact-icon mr-15">
+                                    <i class="far fa-phone"></i>
+                                </div>
+                                <div class="offcanvas__contact-text">
+                                    <a href="tel:+1234567890">+1234567890</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="header-button mt-4">
+                            <a href="../contact.html" class="theme-btn text-center">
+                                <span>Contáctanos<i class="fas fa-chevron-right"></i></span>
+                            </a>
+                        </div>
+                        <div class="social-icon d-flex align-items-center">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="offcanvas__overlay"></div>
+
+    <!-- Header Area Start -->
+    <header class="header-section-2 glass-header-shell">
+        <div id="header-sticky" class="header-2 glass-header">
+            <div class="container">
+                <div class="mega-menu-wrapper">
+                    <div class="header-main">
+                        <div class="logo">
+                            <a href="../index.html" class="header-logo">
+                                <img src="../assets/img/logo/logo2.png" alt="Kioscos y Tecnologia">
+                            </a>
+                        </div>
+                        <div class="header-left">
+                            <div class="mean__menu-wrapper">
+                                <div class="main-menu">
+                                    <nav id="mobile-menu">
+                                        <ul>
+                                            <li>
+                                                <a href="../index.html">Inicio</a>
+                                            </li>
+
+                                            <li class="has-dropdown quienes-somos">
+                                                <a href="#">Quienes somos <i class="fas fa-angle-down"></i></a>
+                                                <ul class="submenu">
+                                                    <li><a href="../about.html">Compañia</a></li>
+                                                    <li><a href="../blog.html">Blog</a></li>
+                                                    <li><a href="../service-modalidad.html">Modalidad de venta</a></li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="has-dropdown active menu-thumb">
+                                                <a href="../index.html">
+                                                    Sectores
+                                                    <i class="fas fa-angle-down"></i>
+                                                </a>
+                                                <ul class="submenu has-home-menu">
+                                                    <li class="border-none">
+                                                        <div class="row g-4">
+                                                            <div class="col-lg-3 home-menu">
+                                                                <div class="home-menu-thumb">
+                                                                    <img src="../assets/img/Sectores/SALUD-180X225.jpg"
+                                                                        alt="img">
+                                                                    <div class="demo-button">
+                                                                        <a href="../salud.html" class="theme-btn">
+                                                                            <span>Sector Salud</span>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-3 home-menu">
+                                                                <div class="home-menu-thumb">
+                                                                    <img src="../assets/img/Sectores/BANCA-180X225.jpg"
+                                                                        alt="img">
+                                                                    <div class="demo-button">
+                                                                        <a href="../banca.html" class="theme-btn">
+                                                                            <span>Sector Banca</span>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-3 home-menu">
+                                                                <div class="home-menu-thumb">
+                                                                    <img src="../assets/img/Sectores/EDUCATIVO-180X225.jpg"
+                                                                        alt="img">
+                                                                    <div class="demo-button">
+                                                                        <a href="../educacion.html" class="theme-btn">
+                                                                            <span>Sector Educacion</span>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-lg-3 home-menu">
+                                                                <div class="home-menu-thumb">
+                                                                    <img src="../assets/img/Sectores/RESTAURANTES-180X225.jpg"
+                                                                        alt="img">
+                                                                    <div class="demo-button">
+                                                                        <a href="../restaurantes.html"
+                                                                            class="theme-btn">
+                                                                            <span>Sector Restaurantes</span>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-3 home-menu">
+                                                                <div class="home-menu-thumb">
+                                                                    <img src="../assets/img/Sectores/RETAIL-180X225.jpg"
+                                                                        alt="img">
+                                                                    <div class="demo-button">
+                                                                        <a href="../retail.html" class="theme-btn">
+                                                                            <span>Sector Retail</span>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-3 home-menu">
+                                                                <div class="home-menu-thumb">
+                                                                    <img src="../assets/img/Sectores/HOTELES-180X225.jpg"
+                                                                        alt="img">
+                                                                    <div class="demo-button">
+                                                                        <a href="../hotel.html" class="theme-btn">
+                                                                            <span>Sector Hotel</span>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-lg-3 home-menu">
+                                                                <div class="home-menu-thumb">
+                                                                    <img src="../assets/img/Sectores/CORPOTARIVO-180X225.jpg"
+                                                                        alt="img">
+                                                                    <div class="demo-button">
+                                                                        <a href="../Corporativo.html" class="theme-btn">
+                                                                            <span>Sector Corporativo</span>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-lg-3 home-menu">
+                                                                <div class="home-menu-thumb">
+                                                                    <img src="../assets/img/Sectores/GOBIERNO-180X225.jpg"
+                                                                        alt="img">
+                                                                    <div class="demo-button">
+                                                                        <a href="../Gobierno.html" class="theme-btn">
+                                                                            <span>Sector Gobierno</span>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="has-dropdown active d-lg-none">
+                                                <a href="#" class="border-none">
+                                                    Sectores
+                                                    <i class="fas fa-angle-down"></i>
+                                                </a>
+                                                <ul class="submenu">
+                                                    <li><a href="../salud.html">Sector Salud</a></li>
+                                                    <li><a href="../banca.html">Sector Banca</a></li>
+                                                    <li><a href="../educacion.html">Sector Educacion</a></li>
+                                                    <li><a href="../restaurantes.html">Sector Restaurantes</a></li>
+                                                    <li><a href="../retail.html">Sector Retail</a></li>
+                                                    <li><a href="../hotel.html">Sector Hotel</a></li>
+                                                    <li><a href="../Corporativo.html">Sector Corporativo</a></li>
+                                                    <li><a href="../Gobierno.html">Sector Gobierno</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="../kyt.html">K&T Suite</a>
+                                            </li>
+
+                                            <li>
+                                                <a href="../Kioscos.html">Kioscos</a>
+                                            </li>
+
+                                            <li>
+                                                <a href="../Pos.html">POS</a>
+                                            </li>
+
+                                            <li class="has-dropdown aprende-menu">
+                                                <a href="#">
+                                                    Aprende con K&amp;T
+                                                    <i class="fas fa-angle-down"></i>
+                                                </a>
+                                                <ul class="submenu glass-dropdown-menu">
+                                                    <li class="submenu-title">Domina la autogestión</li>
+                                                    <li><a href="../que-son-los-kioscos-digitales.html">Qué es un
+                                                            kiosco</a></li>
+                                                    <li><a href="../blog.html">Lecciones</a></li>
+                                                    <li class="submenu-title">Domina el POS</li>
+                                                    <li><a href="../Pos.html">Qué es un POS</a></li>
+                                                    <li><a href="../blog.html">Lecciones</a></li>
+                                                </ul>
+                                            </li>
+
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-right d-flex justify-content-end align-items-center">
+                            <div class="glass-header-actions d-none d-lg-flex align-items-center">
+                                <a href="../Pos.html" class="glass-shop-btn">
+                                    <i class="fas fa-shopping-basket"></i>
+                                    <span>La tienda del POS</span>
+                                </a>
+                            </div>
+                            <div class="header__hamburger d-lg-none my-auto">
+                                <div class="sidebar__toggle">
+                                    <i class="far fa-bars"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search Area Start -->
+    <div class="search-wrap">
+        <div class="search-inner">
+            <i class="fas fa-times search-close" id="search-close"></i>
+            <div class="search-cell">
+                <form method="get">
+                    <div class="search-field-holder">
+                        <input type="search" class="main-search-input" placeholder="Search...">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--<< Breadcrumb Section Start >>-->
+    <div class="breadcrumb-wrapper section-padding bg-cover"
+        style="background-image: url('../assets/img/breadcrumb1.jpg');">
+        <div class="container">
+            <div class="page-heading">
+                <h1 class="wow fadeInUp" data-wow-delay=".3s">Soluciones de Mesa Interactiva</h1>
+            </div>
+        </div>
+    </div>
+
+    <!--<< K1 Hero Section Start >>-->
+    <section class="k1-details-hero section-padding pt-5" id="general">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="k1-hero-content wow fadeInUp" data-wow-delay=".3s">
+                        <span style="font-size: 24px; font-weight: 300; display: block; margin-bottom: 5px;">Mesa
+                            interactiva</span>
+                        <h1
+                            style="font-size: 100px; font-weight: 900; line-height: 1; margin-bottom: 25px; color: #000;">
+                            Serveo</h1>
+                        <p style="font-size: 18px; line-height: 1.6; color: #555; margin-bottom: 30px;">Nuestra mesa
+                            interactiva de madera es una creación 100% colombiana que fusiona el diseño cálido y
+                            elegante de la madera con la tecnología más avanzada.</p>
+                        <div class="kiosk-hero-logos" aria-label="Certificaciones del kiosco">
+                            <img src="../assets/img/brand/06.png" alt="Logo certificación 1" class="kiosk-hero-logo">
+                            <img src="../assets/img/brand/05.png" alt="Logo certificación 2" class="kiosk-hero-logo">
+                            <img src="../assets/img/brand/04.png" alt="Logo certificación 3" class="kiosk-hero-logo">
+                        </div>
+                        <div class="hero-button mt-4">
+                            <a href="../contact.html" class="theme-btn"
+                                style="background-color: #3b609c; border-color: #3b609c;">
+                                <span>Solicitar cotización <i class="fas fa-chevron-right"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="k1-hero-image wow fadeInRight" data-wow-delay=".5s">
+                        <img src="../assets/img/about/about.jpg" alt="Kiosco [PRODUCTO] Variations"
+                            style="width: 100%; height: auto;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--<< Sticky Navigation Start >>-->
+    <div class="k1-sticky-nav" style="background: #a9cfea; position: sticky; top: 0; z-index: 1000; padding: 15px 0;">
+        <div class="container text-center">
+            <ul class="d-flex justify-content-center align-items-center list-unstyled m-0 gap-4 gap-md-5 flex-wrap">
+                <li><a href="#sectores" style="color: #2b4d7d; font-weight: 600; text-decoration: none;">Sectores</a>
+                </li>
+                <li><a href="#flexibilidad" style="color: #2b4d7d; font-weight: 600; text-decoration: none;">Descripción
+                        general</a></li>
+                <li><a href="#modelos" style="color: #2b4d7d; font-weight: 600; text-decoration: none;">Configuraciones
+                        y modelos</a></li>
+                <li><a href="#detalles" style="color: #2b4d7d; font-weight: 600; text-decoration: none;">Detalles</a>
+                </li>
+                <li><a href="#ficha" style="color: #2b4d7d; font-weight: 600; text-decoration: none;">Ficha técnica</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!--<< Sectors Section Start >>-->
+    <section class="sectors-section section-padding" id="sectores">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <div class="section-title mb-4">
+                        <h2
+                            style="font-size: 42px; color: #3b609c; border-left: 5px solid #a9cfea; padding-left: 15px;">
+                            Ideal para los siguientes sectores</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 mb-3">
+                            <ul class="list-unstyled" style="font-size: 18px; color: #555;">
+                                <li class="mb-2"><span style="color: #a9cfea; margin-right: 10px;">●</span> minorista
+                                </li>
+                                <li class="mb-2"><span style="color: #a9cfea; margin-right: 10px;">●</span> restaurante
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-6 mb-3">
+                            <ul class="list-unstyled" style="font-size: 18px; color: #555;">
+                                <li class="mb-2"><span style="color: #a9cfea; margin-right: 10px;">●</span> turismo</li>
+                                <li class="mb-2"><span style="color: #a9cfea; margin-right: 10px;">●</span> educativo
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="sectors-image wow fadeInUp" data-wow-delay=".4s">
+                        <img src="../assets/img/news/01.jpg" alt="Sectors"
+                            style="width: 100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--<< Flexibility Section Start >>-->
+    <section class="flexibility-section section-padding bg-light" id="flexibilidad">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-2 order-lg-1">
+                    <div class="flex-image wow fadeInLeft" data-wow-delay=".3s" style="text-align: center;">
+                        <img src="../assets/img/Kioscos/Serveo/Img1.png" alt="Flexibilidad K1"
+                            style="max-width: 400px; width: 100%;">
+                    </div>
+                </div>
+                <div class="col-lg-6 order-1 order-lg-2">
+                    <div class="section-title mb-4">
+                        <h2 style="font-size: 42px; font-weight: 700; color: #000;">Máxima flexibilidad y eficiencia
+                        </h2>
+                    </div>
+                    <p style="font-size: 17px; line-height: 1.8; color: #444; margin-bottom: 20px;">Serveo es una
+                        solución tecnológica diseñada para transformar cualquier espacio en una experiencia digital
+                        colaborativa. Integra una pantalla AIO de 21,5” con sistema Android actualizable, que ofrece un
+                        entorno dinámico, fluido y totalmente táctil para interacción, consulta y entretenimiento. Su
+                        alto nivel de brillo y respuesta multitáctil permiten una experiencia cómoda y precisa.
+                        Su estructura independiente combina acero con acabado resistente y superficie melamínica RH,
+                        aportando durabilidad y diseño moderno en un formato tipo mesa que invita a la interacción.
+                        Además, puede configurarse opcionalmente con Mini PC de alto rendimiento para proyectos que
+                        requieran mayor potencia y versatilidad. Serveo es la combinación perfecta entre tecnología,
+                        diseño y funcionalidad para espacios que buscan innovación y participación activa del usuario.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--<< Models Section Start >>-->
+    <section class="models-section section-padding" id="modelos">
+        <div class="container text-center">
+            <h2 class="mb-5" style="font-size: 42px; font-weight: 700;">Modelos según tu necesidad</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 wow fadeInUp" data-wow-delay=".2s">
+                    <div class="model-card p-4">
+                        <img src="../assets/img/Kioscos/Serveo/Img2.png" alt="Mostrador" class="mb-4"
+                            style="height: 250px; object-fit: contain; width: 100%;">
+                        <p style="font-size: 18px; color: #555;">Mostrador: desde<br>15" a 21"</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow fadeInUp" data-wow-delay=".4s">
+                    <div class="model-card p-4">
+                        <img src="../assets/img/Kioscos/Serveo/Img3.png" alt="Pedestal" class="mb-4"
+                            style="height: 250px; object-fit: contain; width: 100%;">
+                        <p style="font-size: 18px; color: #555;">Pedestal: desde<br>15" a 21"</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow fadeInUp" data-wow-delay=".6s">
+                    <div class="model-card p-4">
+                        <img src="../assets/img/Kioscos/Serveo/Img4.png" alt="Soporte pared" class="mb-4"
+                            style="height: 250px; object-fit: contain; width: 100%;">
+                        <p style="font-size: 18px; color: #555;">Soporte pared: desde<br>15" a 21"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--<< Different View Section Start >>-->
+    <section class="details-view-section section-padding bg-light" id="detalles">
+        <div class="container text-center">
+            <h2 class="mb-5" style="font-size: 42px; font-weight: 700;">Una vista diferente</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 wow fadeInUp" data-wow-delay=".2s">
+                    <div class="detail-img-card"
+                        style="background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                        <img src="../assets/img/Kioscos/Serveo/Img5.png" alt="Protección IP65 Antiderrames"
+                            style="width: 100%; height: 200px; object-fit: contain; background: #f5f5f5;">
+                        <div class="p-3">
+                            <h5
+                                style="font-size: 16px; text-transform: uppercase; font-weight: 700; margin-bottom: 10px;">
+                                PROTECCIÓN IP65 ANTIDERRAMES</h5>
+                            <p style="font-size: 14px; color: #777;">Totalmente protegida contra el polvo y resistente a
+                                salpicaduras, ideal para restaurantes y espacios de alto tráfico.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow fadeInUp" data-wow-delay=".4s">
+                    <div class="detail-img-card"
+                        style="background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                        <img src="../assets/img/Kioscos/Serveo/Img6.png" alt="Experiencia Interactiva Completa"
+                            style="width: 100%; height: 200px; object-fit: contain; background: #f5f5f5;">
+                        <div class="p-3">
+                            <h5
+                                style="font-size: 16px; text-transform: uppercase; font-weight: 700; margin-bottom: 10px;">
+                                EXPERIENCIA INTERACTIVA COMPLETA</h5>
+                            <p style="font-size: 14px; color: #777;">Fomenta la conexión entre personas, familias,
+                                estudiantes o equipos de trabajo, integrando lo digital en la experiencia cotidiana.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow fadeInUp" data-wow-delay=".6s">
+                    <div class="detail-img-card"
+                        style="background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                        <img src="../assets/img/Kioscos/Serveo/Img7.png" alt="Base"
+                            style="width: 100%; height: 200px; object-fit: contain; background: #f5f5f5;">
+                        <div class="p-3">
+                            <h5
+                                style="font-size: 16px; text-transform: uppercase; font-weight: 700; margin-bottom: 10px;">
+                                BASE</h5>
+                            <p style="font-size: 14px; color: #777;">Estructura robusta con acabado duradero y
+                                profesional.</p>
+                        </div>
+                    </div>
+                </div>
+                elegante.</p>
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+    </section>
+
+    <!--<< Technical Specs Section Start >>-->
+    <section class="specs-section section-padding" id="ficha">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <div class="specs-content wow fadeInUp" data-wow-delay=".3s">
+                        <h2 class="mb-4" style="font-size: 42px; font-weight: 700;">Conoce más</h2>
+                        <h5 style="color: #3b609c; font-weight: 700;">PANTALLA AIO</h5>
+                        <ul class="list-unstyled mb-4" style="line-height: 2; color: #555; margin-left: 15px;">
+                            <li><i class="far fa-circle text-primary me-2" style="font-size: 10px;"></i> Tamaño: 21,5”
+                                pulgadas</li>
+                            <li><i class="far fa-circle text-primary me-2" style="font-size: 10px;"></i> Resolución:
+                                Full HD (1920 x 1080)</li>
+                            <li><i class="far fa-circle text-primary me-2" style="font-size: 10px;"></i> Relación
+                                aspecto: 16:9</li>
+                            <li><i class="far fa-circle text-primary me-2" style="font-size: 10px;"></i> Sistema
+                                operativo: Android 13 actualizable</li>
+                            <li><i class="far fa-circle text-primary me-2" style="font-size: 10px;"></i> Procesador:
+                                Cortex A55 Quad 2.0Ghz CPU</li>
+                            <li><i class="far fa-circle text-primary me-2" style="font-size: 10px;"></i> GPU Mail-G52,
+                                soporte OpenGL ES 1.1/2.0/3.2, OpenCL 2.0</li>
+                            <li><i class="far fa-circle text-primary me-2" style="font-size: 10px;"></i> RAM: 2GB</li>
+                            <li><i class="far fa-circle text-primary me-2" style="font-size: 10px;"></i> ROM: 32GB</li>
+                            <li><i class="far fa-circle text-primary me-2" style="font-size: 10px;"></i> Brillo:
+                                500cd/m²</li>
+                            <li><i class="far fa-circle text-primary me-2" style="font-size: 10px;"></i> Tecnología
+                                touch: 10 toques</li>
+                        </ul>
+                        <h5 style="color: #3b609c; font-weight: 700;">ENCLOSURE</h5>
+                        <ul class="list-unstyled mb-4" style="line-height: 2; color: #555; margin-left: 15px;">
+                            <li><i class="far fa-circle text-primary me-2" style="font-size: 10px;"></i> Material: Acero
+                                Cold rolled acabado en pintura electrostática</li>
+                            <li><i class="far fa-circle text-primary me-2" style="font-size: 10px;"></i> Superficie
+                                melaminico RH</li>
+                            <li><i class="far fa-circle text-primary me-2" style="font-size: 10px;"></i> Dimensiones:
+                                1130 x 750 x 910mm (An x Al x Pro)</li>
+                            <li><i class="far fa-circle text-primary me-2" style="font-size: 10px;"></i> Montaje:
+                                Independiente</li>
+                        </ul>
+                        <h5 style="color: #3b609c; font-weight: 700;">MINI PC (opcional)</h5>
+                        <ul class="list-unstyled mb-4" style="line-height: 2; color: #555; margin-left: 15px;">
+                            <li><i class="far fa-circle text-primary me-2" style="font-size: 10px;"></i> Procesador:
+                                Intel 11ª Gen. Core (i3 / i5 / i7)</li>
+                            <li><i class="far fa-circle text-primary me-2" style="font-size: 10px;"></i> Memoria: Min.
+                                8Gb Max. 32Gb</li>
+                            <li><i class="far fa-circle text-primary me-2" style="font-size: 10px;"></i> Disco duro: SSD
+                                min. 256Gb</li>
+                            <li><i class="far fa-circle text-primary me-2" style="font-size: 10px;"></i> Conectividad:
+                                LAN, WiFi</li>
+                        </ul>
+                        <a href="#" class="theme-btn" style="background-color: #3b609c; border-color: #3b609c;">
+                            <span>Descargar ficha técnica <i class="fas fa-file-download"></i></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-5 text-center">
+                    <div class="specs-image wow fadeInRight" data-wow-delay=".5s">
+                        <img src="../assets/img/Kioscos/Serveo/Img8.png" alt="Serveo Specs"
+                            style="max-width: 350px; width: 100%;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--<< Personalized Footer CTA >>-->
+    <section class="personalized-cta py-5" style="background: linear-gradient(to right, #e8f1f8, #f8faff);">
+        <div class="container text-center">
+            <h2 class="mb-3" style="font-size: 36px; font-weight: 700;">Kioscos personalizados</h2>
+            <p class="mb-4" style="font-size: 18px; color: #555;">¿No encuentras la solución entre nuestras opciones
+                estándares o buscas algo a la medida de tu necesidad?<br>En cualquier caso, tenemos la respuesta.</p>
+            <a href="../contact.html" class="theme-btn" style="background-color: #3b609c; border-color: #3b609c;">
+                <span>Kiosco personalizado <i class="fas fa-chevron-right"></i></span>
+            </a>
+        </div>
+    </section>
+
+
+
+    <!--<< Footer Section Start >>-->
+    <footer class="footer-section section-bg-3">
+        <div class="container">
+            <div class="footer-widgets-wrapper">
+                <div class="row">
+                    <div class="col-xl-3 col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay=".2s">
+                        <div class="single-footer-widget">
+                            <div class="widget-head">
+                                <a href="../index.html">
+                                    <img src="../assets/img/logo/logo2.png" alt="logo-img">
+                                </a>
+                            </div>
+                            <div class="footer-content">
+                                <p>
+                                    Creemos en el poder de la tecnología <br>
+                                    para transformar negocios.
+                                </p>
+                                <span>¿Interesado en trabajar con nosotros?</span> <br>
+                                <a href="mailto:info@kioscosytecnologia.com"
+                                    class="link">info@kioscosytecnologia.com</a>
+                                <div class="social-icon d-flex align-items-center">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-vimeo-v"></i></a>
+                                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 ps-lg-5 col-sm-6 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay=".4s">
+                        <div class="single-footer-widget">
+                            <div class="widget-head">
+                                <h5>Enlaces Rápidos</h5>
+                            </div>
+                            <ul class="list-items">
+                                <li>
+                                    <a href="service-details.html">
+                                        Servicios
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../about.html">
+                                        Sobre Nosotros
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="news-details.html">
+                                        Últimas Noticias
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="team.html">
+                                        Nuestro Equipo
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="testimonial.html">
+                                        testimonials
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 ps-lg-4 col-sm-6 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay=".6s">
+                        <div class="single-footer-widget">
+                            <div class="widget-head">
+                                <h5>Soporte</h5>
+                            </div>
+                            <ul class="list-items">
+                                <li>
+                                    <a href="../contact.html">
+                                        Foro de Soporte
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../faq.html">
+                                        Ayuda y FAQs
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../contact.html">
+                                        Contáctanos
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="pricing.html">
+                                        Pricing and plans
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../contact.html">
+                                        Cookies Policy
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay=".8s">
+                        <div class="single-footer-widget">
+                            <div class="widget-head">
+                                <h5>Dirección:</h5>
+                            </div>
+                            <div class="footer-address-text">
+                                <p>
+                                    Bogotá, Colombia
+                                </p>
+                                <h5>Horarios:</h5>
+                                <p>
+                                    9.30am – 6.30pm <br>
+                                    Lunes a Viernes
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 ps-xl-5 col-sm-6 col-md-6 col-lg-4 wow fadeInUp" data-wow-delay=".9s">
+                        <div class="single-footer-widget">
+                            <div class="widget-head">
+                                <h5>Contáctanos</h5>
+                            </div>
+                            <div class="footer-apps-items">
+                                <p>Llámanos para una consulta</p>
+                                <div class="apps-image d-flex align-items-center">
+                                    <!-- Apps removed as they might not be relevant, replaced with contact focus -->
+                                </div>
+                                <div class="support-text">
+                                    <p>Soporte 24/7</p>
+                                    <h3><a href="tel:+1718-904-4450">+1718-904-4450</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-wrapper d-flex align-items-center justify-content-between">
+                    <p class="wow fadeInLeft color-2" data-wow-delay=".3s">
+                        Copyright © 2024 <a href="../index.html">Kioscos y Tecnología</a>. Todos los derechos
+                        reservados.
+                    </p>
+                    <ul class="footer-menu wow fadeInRight" data-wow-delay=".5s">
+                        <li>
+                            <a href="../about.html">
+                                Company
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../contact.html">
+                                Support
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../contact.html">
+                                Privacy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../faq.html">
+                                Faqs
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <a href="#" id="scrollUp" class="scroll-icon">
+                <i class="far fa-arrow-up"></i>
+            </a>
+        </div>
+    </footer>
+
+    <!--<< All JS Plugins >>-->
+    <script src="../assets/js/jquery-3.7.1.min.js"></script>
+    <!--<< Viewport Js >>-->
+    <script src="../assets/js/viewport.jquery.js"></script>
+    <!--<< Bootstrap Js >>-->
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <!--<< Nice Select Js >>-->
+    <script src="../assets/js/jquery.nice-select.min.js"></script>
+    <!--<< Waypoints Js >>-->
+    <script src="../assets/js/jquery.waypoints.js"></script>
+    <!--<< Counterup Js >>-->
+    <script src="../assets/js/jquery.counterup.min.js"></script>
+    <!--<< Slick Js >>-->
+    <script src="../assets/js/slick.min.js"></script>
+    <!--<< Slick Animation Js >>-->
+    <script src="../assets/js/slick-animation.min.js"></script>
+    <!--<< MeanMenu Js >>-->
+    <script src="../assets/js/jquery.meanmenu.min.js"></script>
+    <!--<< Magnific Popup Js >>-->
+    <script src="../assets/js/jquery.magnific-popup.min.js"></script>
+    <!--<< Wow Animation Js >>-->
+    <script src="../assets/js/wow.min.js"></script>
+    <!--<< Circle Progress Js >>-->
+    <script src="../assets/js/circle-progress.js"></script>
+    <!--<< Main.js >>-->
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>
